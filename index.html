@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory_Game</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="css/all.min.css" />
+
+</head>
+<body>
+    <div class="over-lay"></div>
+    <div class="control-buttons">
+        <span>start game</span>
+    </div>
+    <div class="info-container">
+        <div class="name">
+            Player: <span></span>
+        </div>
+        <!-- Added feature:
+        -Counter
+        -->
+        <div class="counter">
+            <span class="minutes">2</span> :
+            <span class="seconds">00</span>
+        </div>
+        <div class="tries">
+            worng tries: <span>0</span> 
+        </div>
+    </div>
+    <div class="memory-game-blocks">
+        <div class="game-block" data-technology="vuejs">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-vuejs"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="vuejs">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-vuejs"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="react">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-react"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="react">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-react"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="html5">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-html5"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="html5">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-html5"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="css3">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-css3-alt"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="css3">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-css3-alt"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="gulp">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-gulp"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="gulp">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-gulp"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="angular">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-angular"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="angular">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-angular"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="python">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-python"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="python">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-python"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="sass">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-sass"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="sass">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-sass"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="figma">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-figma"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="figma">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-figma"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="yarn">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-yarn"></i>
+            </div>
+        </div>
+        <div class="game-block" data-technology="yarn">
+            <div class="face front"></div>
+            <div class="face back">
+                <i class="fab fa-yarn"></i>
+            </div>
+        </div>
+    </div>
+    <div class="you-win">
+        <div>congratulations</div>
+        <span>you win</span>
+        <button>play again</button>
+    </div>
+    <div class="you-lose">
+        <div>bad luck</div>
+        <span>you lose</span>
+        <button>try again</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

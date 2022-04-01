@@ -1,0 +1,251 @@
+* {
+box-sizing: border-box;
+}
+.over-lay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #47fff3a1;
+    z-index: 2;
+    display: none;
+}
+.control-buttons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #47fff3a1;
+    z-index: 2;
+    text-align: center;
+    /* display: none; */
+}
+.control-buttons span{
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    background: yellowgreen;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 6px 0px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid rgb(88, 118, 175);
+    width: 1080px;
+    margin: 20px auto 0;
+    padding: 20px;
+    font-size: 24px;
+}
+.memory-game-blocks {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+.memory-game-blocks .game-block {
+    height: 200px;
+    transition: .4s;
+    transform-style: preserve-3d;
+    position: relative;
+    
+    flex: 1 0 200px;
+    margin: 0 20px 20px;
+    cursor: pointer;
+}
+.memory-game-blocks .game-block .front {
+    background-color: #333;
+    line-height: 200px;
+}
+.memory-game-blocks .game-block .front::before {
+    content: "!";
+    font-weight: bold;
+    font-size: 140px;
+    color: white;
+}
+.memory-game-blocks .game-block .back {
+    background-color: #607d;
+    transform: rotateY(180deg);
+}
+.memory-game-blocks .game-block .back i {
+    font-size: 160px;
+    margin-top: 20px;
+}
+.memory-game-blocks .game-block .face {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 10px solid rgb(88, 118, 175);
+
+}
+.memory-game-blocks .game-block.has-match,
+.memory-game-blocks .game-block.is-flipped {
+    transform: rotateY(180deg);
+}
+.un-click{
+    pointer-events: none;
+}
+.you-win{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 400px;
+    background: rgb(166 137 247);
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    text-align: center;
+    display: none;
+    z-index: 3;
+}
+
+.you-win div{
+    position: relative;
+    top: 15%;
+    font-size: 50px;
+    font-family: cursive;
+    color: darkslategrey;
+    text-transform: capitalize;
+}
+.you-win span{
+    position: relative;
+    top: 28%;
+    left: 20%;
+    font-family: monospace;
+    font-size: 35px;
+    font-weight: bold;
+    color: darkred;
+    text-transform: uppercase;
+}
+.you-win button{
+    font-size: 30px;
+    position: relative;
+    top: 55%;
+    right: 12%;
+    border: 1px solid black;
+    background: transparent;
+    padding: 10px 30px;
+    color: darkblue;
+    text-transform: capitalize;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.you-lose{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 400px;
+    background: rgb(253 0 105);
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    text-align: center;
+    display: none;
+    z-index: 3;
+
+}
+.you-lose div{
+    position: relative;
+    top: 15%;
+    font-size: 50px;
+    font-family: cursive;
+    color: darkslategrey;
+    text-transform: capitalize;
+}
+.you-lose span{
+    position: relative;
+    top: 28%;
+    left: 20%;
+    font-family: monospace;
+    font-size: 35px;
+    font-weight: bold;
+    color: darkred;
+    text-transform: uppercase;
+}
+.you-lose button{
+    font-size: 30px;
+    position: relative;
+    top: 55%;
+    right: 12%;
+    border: 1px solid black;
+    background: transparent;
+    padding: 10px 30px;
+    color: darkblue;
+    text-transform: capitalize;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media(max-width: 767px){
+
+    .control-buttons span{
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+    .info-container {
+        border: 3px solid rgb(88, 118, 175);
+        width: calc(100% - 20px);
+        margin: 20px auto 0;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .memory-game-blocks {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+    }
+    .memory-game-blocks .game-block {
+        height: 66px;
+        flex: 1 0 21%;
+        margin: 0 5px 10px;
+    }
+    .memory-game-blocks .game-block .front {
+        line-height: 70px;
+    }
+    .memory-game-blocks .game-block .front::before {
+        font-size: 50px;
+    }
+    .memory-game-blocks .game-block .back i {
+        font-size: 50px;
+        margin-top: 5px;
+    }
+    .memory-game-blocks .game-block .face {
+        border: 3px solid rgb(88, 118, 175)    
+    }
+    .you-win,
+    .you-lose{
+        width: 300px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        }
+    
+    .you-win div,
+    .you-lose div{
+        top: 15%;
+        font-size: 33px;
+        }
+    .you-win span,
+    .you-lose span{
+        top: 22%;
+        left: 0%;
+        font-size: 25px
+    }
+    .you-win button,
+    .you-lose button{
+        font-size: 18px;
+        position: absolute;
+        transform: translateX(-50%);
+        top: 140px;
+        padding: 8px 15px;
+        border-radius: 6px;
+    }
+}
